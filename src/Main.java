@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -6,17 +7,20 @@ public class Main {
         // Scrie un program care cere de la user un numar de ghicit, daca acesta este "13" afiseaza "Ai ghicit ", daca este mai mare de "13" afiseaza
         // mai putin iar daca este mai mic decat "13" afiseaza mai  mult.
 
-        Scanner sc = new Scanner(System.in);
+        // Update1: transforma numarul 13 intr-un numar aleatoriu
 
+        Scanner sc = new Scanner(System.in);
+        Random rnd = new Random();
+        int hiddenNumber = rnd.nextInt(100);
 
         while (true) {
             System.out.println("Introduceti un numar");
-            int numar = sc.nextInt();
+            int guessedNumber = sc.nextInt();
 
-            if (numar < 13) {
+            if (guessedNumber < hiddenNumber) {
                 System.out.println("Mai mult");
             }
-            else if (numar > 13) {
+            else if (guessedNumber > hiddenNumber) {
                 System.out.println("Mai putin");
             }
             else {
