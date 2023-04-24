@@ -16,14 +16,14 @@ public class Main {
         int counter = 0;
 
         while (true) {
-            System.out.println("Introduceti un numar");
+            System.out.print("Guess the number: ");
             int guessedNumber = sc.nextInt();
             counter++;
 
             if (guessedNumber < hiddenNumber) {
-                System.out.println("Mai mult");
+                System.out.println("More");
             } else if (guessedNumber > hiddenNumber) {
-                System.out.println("Mai putin");
+                System.out.println("Less");
             } else {
                 System.out.println("You guessed using " + counter + " attempts" );
                 break;
