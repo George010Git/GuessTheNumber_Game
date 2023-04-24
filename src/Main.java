@@ -19,15 +19,12 @@ public class Main {
 
             if (guessedNumber < hiddenNumber) {
                 System.out.println("Mai mult");
-            }
-            else if (guessedNumber > hiddenNumber) {
+            } else if (guessedNumber > hiddenNumber) {
                 System.out.println("Mai putin");
-            }
-            else {
+            } else {
                 System.out.println("Ai ghicit");
                 break;
             }
         }
-
     }
 }
